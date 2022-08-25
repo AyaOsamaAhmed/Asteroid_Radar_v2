@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="asteroid"
+            type="com.udacity.asteroidradar.db.AsteroidModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_background"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/asteroid_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="_68347_2001_kb67"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/default_text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/asteroid_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2020-02-08"
+            android:textColor="@color/default_text_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/asteroid_num"
+            app:layout_constraintTop_toBottomOf="@+id/asteroid_num" />
+
+        <ImageView
+            android:id="@+id/asteroid_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/ic_status_normal"
+            android:textColor="@color/default_text_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/asteroid_num" />
+<!--
+  app:asteroidImageIsHazardousContentDescription="@{asteroid.potentiallyHazardous}"
+
+-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
